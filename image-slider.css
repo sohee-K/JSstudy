@@ -1,0 +1,48 @@
+.image-container {
+    text-align: center;
+    display: block;
+}
+
+.image-container img{
+    z-index: 1;
+    margin: auto;
+    width: 576px;
+    height: 324px;
+}
+
+.hide {
+    display: none;
+}
+
+button {
+    width: 40px;
+    height: 40px;
+    border-radius: 20px;
+    background-color: rgba(0, 0, 0, 0);
+    border: none;
+    font-size: x-large;
+    color: white;
+}
+
+button:hover {
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+.go-left,
+.go-right {
+    z-index: 2;
+    position: absolute;
+    top: 25vh;
+}
+
+.go-right {
+    margin-left: 536px;
+}
+
+.text {
+    z-index: 2;
+    position: absolute;
+    top: 5vh;
+    margin-left: 20px;
+    color: white;
+}

@@ -1,0 +1,22 @@
+.drag-and-drop {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.bucket1,
+.bucket2,
+.bucket3,
+.bucket4 {
+    width: 100px;
+    height: 100px;
+    margin: 10px;
+    padding: 10px;
+    border: 1px solid black;
+}
+
+.drag {
+    z-index: 1;
+    width: 100px;
+    height: 100px;
+}
