@@ -1,0 +1,93 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex: 1;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background-color: skyblue;
+}
+
+.clock {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.analog {
+    width: 200px;
+    height: 200px;
+    border-radius: 100px;
+    background-color: white;
+}
+
+.analog > p {
+    color: skyblue;
+    font-size: 18px;
+    font-weight: 500;
+    text-align: center;
+}
+
+.a-hour,
+.a-minute,
+.a-second {
+    height: 2px;
+    border-radius: 1px;
+    position: relative;
+    transform-origin: 100%;
+    transform: rotate(90deg);
+}
+
+.a-hour {
+    z-index: 2;
+    width: 60px;
+    top: 100px;
+    left: 40px;
+    background-color: skyblue;
+}
+
+.a-minute {
+    z-index: 1;
+    width: 90px;
+    top: 98px;
+    left: 10px;
+    background-color: skyblue;
+}
+
+.a-second {
+    z-index: 3;
+    width: 90px;
+    top: 96px;
+    left: 10px;
+    background-color: red;
+}
+
+.digital {
+    margin-top: 10px;
+}
+
+.d-time {
+    color: white;
+    font-size: 28px;
+}
+
+.d-button {
+    color: white;
+    background-color: skyblue;
+    border: 1px solid white;
+    padding: 3px;
+    margin-left: 5px;
+}
+
+.d-button:hover {
+    color: skyblue;
+    background-color: white;
+}

@@ -3,27 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>JS study assignment</title>
-    <link rel="stylesheet" href="image-slider.css">
-    <link rel="stylesheet" href="drag-and-drop.css">
+    <title>Weather App</title>
+    <link rel="stylesheet" href="style.css">
+    <script defer src="clock.js"></script>
 </head>
 <body>
-    <div class="image-slider">
-        <div class="image-container">
-            <span class="text"></span>
-            <button class="go-left">&lt;</button>
-            <button class="go-right">&gt;</button>
+    <div class="clock">
+        <div class="analog">
+            <div class="a-hour"></div>
+            <div class="a-minute"></div>
+            <div class="a-second"></div>
+            <p>12</p>
+        </div>
+        <div class="digital">
+            <span class="d-time"></span>
+            <button class="d-button">AM</button>
         </div>
     </div>
-    <div class="drag-and-drop">
-        <div class="bucket1" ondragover="allowDrop(event)" ondrop="drop(event)">
-            <img class="drag" src="./images/cat.png" draggable="true" ondragstart="drag(event)">
-        </div>
-        <div class="bucket2" ondragover="allowDrop(event)" ondrop="drop(event)"></div>
-        <div class="bucket3" ondragover="allowDrop(event)" ondrop="drop(event)"></div>
-        <div class="bucket4" ondragover="allowDrop(event)" ondrop="drop(event)"></div>
-    </div>
-    <script src="image-slider.js"></script>
-    <script src="drag-and-drop.js"></script>
+    <div class="weather"></div>
 </body>
 </html>
