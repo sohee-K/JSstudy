@@ -34,7 +34,7 @@ function drawClock() {
         second = now.getSeconds(),
         year = now.getFullYear(),
         month = now.getMonth(),
-        day = now.getDay();
+        day = now.getDate();
     
     const monthList = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
 
