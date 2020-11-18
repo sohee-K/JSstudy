@@ -29,8 +29,8 @@ function changeTime() {
 function drawClock() {
     const now = new Date();
 
-    const hour = now.getHours(),
-        minute = now.getMinutes(),
+    let hour = now.getHours();
+    const minute = now.getMinutes(),
         second = now.getSeconds(),
         year = now.getFullYear(),
         month = now.getMonth(),
