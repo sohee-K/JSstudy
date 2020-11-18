@@ -10,7 +10,7 @@ function drawIcon(id) {
     skycons.add("w-icon", Skycons.CLOUDY);
 
     const code = parseInt(id / 100);
-    const time = new Date().getTime();
+    const time = new Date().getHours();
 
     switch(code) {
         case 2:
