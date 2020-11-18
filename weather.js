@@ -57,9 +57,14 @@ function drawWeather(weather) {
     tempsArea.innerHTML = `<span>Feels:</span> ${weather.tempFeel} °C &nbsp;&nbsp;
         <span>Min:</span> ${weather.tempMin} °C &nbsp;&nbsp;
         <span>Max:</span> ${weather.tempMax} °C`;
-    othersArea.innerHTML = `<span>Humidity:</span> ${weather.hum} % &nbsp;&nbsp;
+    if (weather.rain) {
+        othersArea.innerHTML = `<span>Humidity:</span> ${weather.hum} % &nbsp;&nbsp;
         <span>Rain:</span> ${weather.rain} mm/h &nbsp;&nbsp;
         <span>Wind:</span> ${weather.wind} m/s`;
+    } else {
+        othersArea.innerHTML = `<span>Humidity:</span> ${weather.hum} % &nbsp;&nbsp;
+        <span>Wind:</span> ${weather.wind} m/s`;
+    }
 }
 
 async function getData(lat, lon) {
@@ -72,9 +77,9 @@ async function getData(lat, lon) {
         tempMax = (weatherData.main.temp_max - 273.15).toFixed(2),
         hum = weatherData.main.humidity,
         main = weatherData.weather[0].main,
-        rain = weatherData.rain["1h"],
         wind = weatherData.wind.speed,
-        id = weatherData.weather[0].id;
+        id = weatherData.weather[0].id,
+        rain = weatherData.rain ? weatherData.rain["1h"] : null;
 
     const weather = {temp, tempFeel, tempMin, tempMax, hum, main, rain, wind, id};
     drawWeather(weather);
