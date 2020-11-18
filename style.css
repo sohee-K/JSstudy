@@ -7,12 +7,30 @@
 body {
     width: 100vw;
     height: 100vh;
+    background-color: skyblue;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.header {
+    color: white;
+    font-size: 60px;
+    font-weight: 700;
+    margin-top: 50px;
+}
+
+.header > span {
+    color: red;
+}
+
+.main {
     display: flex;
     flex: 1;
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    background-color: skyblue;
 }
 
 .clock {
@@ -20,6 +38,7 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    margin-right: 50px;
 }
 
 .analog {
@@ -30,7 +49,7 @@ body {
 }
 
 .analog > p {
-    color: skyblue;
+    color: gray;
     font-size: 18px;
     font-weight: 500;
     text-align: center;
@@ -90,4 +109,41 @@ body {
 .d-button:hover {
     color: skyblue;
     background-color: white;
+}
+
+.weather,
+.weather-top-right {
+    color: white;
+    display: flex;
+    flex-direction: column;
+}
+
+.weather-top {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 20px;
+}
+
+.w-temp {
+    font-size: 48px;
+    font-weight: 600;
+}
+
+.w-desc {
+    font-size: 32px;
+    font-weight: 400;
+    margin-top: 15px;
+}
+
+.w-temps,
+.w-others {
+    font-size: 18px;
+    text-align: center;
+    margin-left: 20px;
+    margin-top: 5px;
+}
+
+.w-temps > span,
+.w-others > span {
+    color: lightgray;
 }

@@ -2,7 +2,8 @@ const aHour = document.querySelector(".a-hour"),
     aMinute = document.querySelector(".a-minute"),
     aSecond = document.querySelector(".a-second"),
     dTime = document.querySelector(".d-time"),
-    dBtn = document.querySelector(".d-button");
+    dBtn = document.querySelector(".d-button"),
+    header = document.querySelector(".header");
 
 let hour24 = false;
 
@@ -30,7 +31,12 @@ function drawClock() {
 
     const hour = now.getHours(),
         minute = now.getMinutes(),
-        second = now.getSeconds();
+        second = now.getSeconds(),
+        year = now.getFullYear(),
+        month = now.getMonth(),
+        day = now.getDay();
+    
+    const monthList = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
 
     const hourDegree = (hour + minute / 60) * (360 / 12) + 90,
         minuteDegree = (minute + second / 60) * (360 / 60) + 90,
@@ -51,6 +57,7 @@ function drawClock() {
     }
 
     dTime.innerHTML = `${fillZero(hour)} : ${fillZero(minute)} : ${fillZero(second)}`;
+    header.innerHTML = `Today is <span>${day} ${monthList[month]}</span>, ${year}`;
 }
 
 function init() {

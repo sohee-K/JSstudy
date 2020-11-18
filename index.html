@@ -6,20 +6,37 @@
     <title>Weather App</title>
     <link rel="stylesheet" href="style.css">
     <script defer src="clock.js"></script>
+    <script defer src="weather.js"></script>
+    <script src="https://rawgithub.com/darkskyapp/skycons/master/skycons.js"></script>
 </head>
 <body>
-    <div class="clock">
-        <div class="analog">
-            <div class="a-hour"></div>
-            <div class="a-minute"></div>
-            <div class="a-second"></div>
-            <p>12</p>
+    <div class="header"></div>
+    <div class="main">
+        <div class="clock">
+            <div class="analog">
+                <div class="a-hour"></div>
+                <div class="a-minute"></div>
+                <div class="a-second"></div>
+                <p>12</p>
+            </div>
+            <div class="digital">
+                <span class="d-time"></span>
+                <button class="d-button">AM</button>
+            </div>
         </div>
-        <div class="digital">
-            <span class="d-time"></span>
-            <button class="d-button">AM</button>
+        <div class="weather">
+            <div class="weather-top">
+                <canvas id="w-icon"></canvas>
+                <div class="weather-top-right">
+                    <div class="w-temp"></div>
+                    <div class="w-desc"></div>
+                </div>
+            </div>
+            <div class="weather-bottom">
+                <div class="w-temps"></div>
+                <div class="w-others"></div>
+            </div>
         </div>
     </div>
-    <div class="weather"></div>
 </body>
 </html>
